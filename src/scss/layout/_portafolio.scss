@@ -3,4 +3,7 @@
 
 .portafolio{
     margin-bottom: 20rem;
+    .portafolio-img{
+        @include m.grid(3, 1rem);
+    }
 }
