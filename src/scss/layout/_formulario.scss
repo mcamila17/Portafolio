@@ -1,0 +1,108 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto{
+    @include m.tablet {
+        @include m.grid(2, 1rem);
+    }
+}
+.correo {
+    @include m.tablet {
+        margin-top: 10rem;
+    }
+    img{
+        width: 5rem;
+    }
+    h3{
+        margin-bottom: 0;
+        margin-left: 0.9rem;
+    }
+    p{
+        
+        margin: 0.5rem 0 3rem 5rem;
+    }
+    .correo-contenedor{
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+}
+.redSocial{
+    margin-bottom: 5rem;
+    img{
+        width:4rem;
+        margin-left: 0.5rem;
+    }
+    h3{
+        margin-bottom: 0.8rem;
+        margin-left: 1rem;
+    }
+    a{
+        color: v.$negro;
+        font-size: 2rem;
+        margin-left: 5rem;
+        
+    }
+    .redSocial-contenedor{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        align-items: center;
+        
+    }
+}
+.formulario {
+    display: block;
+    width: 30rem;
+    height: 40rem;
+    margin-left: 2rem;
+    @include m.tablet {
+        width: 40rem;
+        height: 40rem;
+        margin-left: 0;
+
+    }
+    background-color: v.$blanco;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+    text-align: center;
+    h2{
+        padding-top: 3rem;
+        
+    }
+}
+.boton{
+    
+    display: block;
+    width: 15rem;
+    font-family: v.$fuente_secuandaria;
+    color: v.$blanco;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    border: none;
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid v.$gris;
+}
+.campo__field--textarea {
+    height: 10rem;
+}

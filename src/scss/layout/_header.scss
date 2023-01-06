@@ -1,0 +1,84 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.portada {
+    font-family: v.$fuente_principal;
+    color: v.$blanco;
+    span{
+        color: v.$azul;
+        text-transform: uppercase;
+        @include m.tablet {
+            color: v.$azulOscuro;
+        }
+    }
+}
+.avatar{
+    width: 20rem;
+    height: auto;
+    align-items: center;
+    
+    @include m.tablet {
+        width: 25rem;
+        height: auto;
+        margin-left: 5rem;
+    }
+    @include m.desktop {
+        width: 30rem;
+        height: auto;
+        margin-left: 15rem;
+    }
+}
+
+.imagenP {
+    position: relative;
+    max-height: 70rem;
+    min-height: 50rem;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        background: rgb(176,73,152);
+        background: radial-gradient(circle, rgba(176,73,152,0.52649572649572647) 3%, rgba(201,124,158,0.16951566951566954) 97%);
+        backdrop-filter: blur(0.28rem);
+        @include m.tablet {
+            background: rgb(176,73,152);
+            background: radial-gradient(circle, rgba(176,73,152,0.25649572649572647) 0%, rgba(201,124,158,0.16951566951566954) 97%);
+            backdrop-filter: blur(0.1rem);
+        }
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    picture {
+        max-width: auto;
+        min-width: 70rem;
+        display: block;
+        
+        @include m.desktop {
+            width: 100%;
+        }
+    }
+}
+.contenido-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    @include m.tablet {
+        @include m.grid(2, 1rem);
+        align-content: end;
+        h2{
+            align-items: center;
+            margin-bottom: 0;
+            padding-top: 10rem;
+            padding-right: 5rem;
+            
+        }
+    }
+}
+
