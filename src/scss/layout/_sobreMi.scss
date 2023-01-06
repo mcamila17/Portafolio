@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre-mi{
+    margin-top: 5rem;
+    p{
+        text-transform: lowercase;
+    }
+}
+.logos{
+    margin-top: 3rem;
+    margin-left: 6rem;
+    text-align: center;
+    img{
+        &:hover {
+            filter: brightness(70%);
+        }
+    }
+        
+    .uno{
+        width: 5.1rem;    
+    }
+    .dos{
+        width: 5.3rem;
+    }
+    .tres{
+        width: 8.6rem;
+    }
+    .cuatro{
+        width: 3.5rem;
+    }
+    .cinco{
+        width: 5.1rem;
+    }
+    .seis{
+        width: 10rem;
+    }
+    @include m.grid(2, 1rem);
+    @include m.tablet {
+        @include m.grid(3, 1rem);
+    }
+}
