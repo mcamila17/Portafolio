@@ -4,6 +4,14 @@
 .portafolio{
     margin-bottom: 20rem;
     .portafolio-img{
-        @include m.grid(3, 1rem);
+        @include m.grid(3, 4rem);
+    }
+    img{
+        transition: transform .2s;
+        &:hover {
+            filter: brightness(70%);
+            transform: scale(1.2);
+             
+        }
     }
 }
